@@ -5,8 +5,8 @@
 #[allow(unused_variables, unused_assignments)]
 fn main() {
     let my_option: Option<()> = None;
-    if !my_option.is_none() {
-        println!("{:?}", my_option.unwrap());
+    if let Some(value) = my_option {
+        println!("{value:?}");
     }
 
     let my_arr = &[
